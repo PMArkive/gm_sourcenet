@@ -24,7 +24,7 @@ hook.Add("PreProcessMessages", "InFilter", function(netchan, read, write, localc
 
 	while read:GetNumBitsLeft() >= NET_MESSAGE_BITS do
 		local msg = read:ReadUInt(NET_MESSAGE_BITS)
-		local handler = NetMessage(msg, not SERVER)
+		local handler = NetMessage(netchan, msg, not SERVER)
 		if not handler then
 			MsgC(Color(255, 0, 0), "Unknown outgoing message " .. msg .. " with " .. read:GetNumBitsLeft() .. " bit(s) left\n")
 			return false
@@ -42,7 +42,7 @@ hook.Add("PreProcessMessages", "InFilter", function(netchan, read, write, localc
 			return false
 		end
 
-		MsgC(Color(255, 255, 255), "NetMessage: " .. tostring(handler) .. "\n")
+		--MsgC(Color(255, 255, 255), "NetMessage: " .. tostring(handler) .. "\n")
 	end
 
 	local bitsleft = read:GetNumBitsLeft()
@@ -52,7 +52,7 @@ hook.Add("PreProcessMessages", "InFilter", function(netchan, read, write, localc
 		write:WriteBits(data)
 	end
 
-	MsgC(Color(0, 255, 0), "Fully parsed stream with " .. totalbits .. " bit(s) written\n")
+	--MsgC(Color(0, 255, 0), "Fully parsed stream with " .. totalbits .. " bit(s) written\n")
 	return true
 end)
 
