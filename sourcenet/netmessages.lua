@@ -50,6 +50,7 @@ NET_MESSAGES = {
 	},
 
 	[net_Disconnect] = { -- 1
+		NativeConstructor = NET_Disconnect,
 		__tostring = function(self)
 			if not self.initialized then
 				return "net_Disconnect"
@@ -81,6 +82,7 @@ NET_MESSAGES = {
 	},
 
 	[net_File] = { -- 2
+		NativeConstructor = NET_File,
 		__tostring = function(self)
 			if not self.initialized then
 				return "net_File"
@@ -132,6 +134,7 @@ NET_MESSAGES = {
 	},
 
 	[net_Tick] = { -- 3
+		NativeConstructor = NET_Tick,
 		__tostring = function(self)
 			if not self.initialized then
 				return "net_Tick"
@@ -167,6 +170,7 @@ NET_MESSAGES = {
 	},
 
 	[net_StringCmd] = { -- 4
+		NativeConstructor = NET_StringCmd,
 		__tostring = function(self)
 			if not self.initialized then
 				return "net_StringCmd"
@@ -198,6 +202,7 @@ NET_MESSAGES = {
 	},
 
 	[net_SetConVar] = { -- 5
+		NativeConstructor = NET_SetConVar,
 		__tostring = function(self)
 			if not self.initialized then
 				return "net_SetConVar"
@@ -253,6 +258,7 @@ NET_MESSAGES = {
 	},
 
 	[net_SignonState] = { -- 6
+		NativeConstructor = NET_SignonState,
 		__tostring = function(self)
 			if not self.initialized then
 				return "net_SignonState"
@@ -287,6 +293,7 @@ NET_MESSAGES = {
 
 	CLC = {
 		[clc_ClientInfo] = { -- 8
+			NativeConstructor = CLC_ClientInfo,
 			__tostring = function(self)
 				if not self.initialized then
 					return "clc_ClientInfo"
@@ -340,6 +347,7 @@ NET_MESSAGES = {
 		},
 
 		[clc_Move] = { -- 9
+			NativeConstructor = CLC_Move,
 			__tostring = function(self)
 				if not self.initialized then
 					return "clc_Move"
@@ -377,6 +385,7 @@ NET_MESSAGES = {
 		},
 
 		[clc_VoiceData] = { -- 10
+			NativeConstructor = CLC_VoiceData,
 			__tostring = function(self)
 				if not self.initialized then
 					return "clc_VoiceData"
@@ -410,6 +419,7 @@ NET_MESSAGES = {
 		},
 
 		[clc_BaselineAck] = { -- 11
+			NativeConstructor = CLC_BaselineAck,
 			__tostring = function(self)
 				if not self.initialized then
 					return "clc_BaselineAck"
@@ -443,6 +453,7 @@ NET_MESSAGES = {
 		},
 
 		[clc_ListenEvents] = { -- 12
+			NativeConstructor = CLC_ListenEvents,
 			__tostring = function()
 				return "clc_ListenEvents"
 			end,
@@ -478,6 +489,7 @@ NET_MESSAGES = {
 		},
 
 		[clc_RespondCvarValue] = { -- 13
+			NativeConstructor = CLC_RespondCvarValue,
 			__tostring = function(self)
 				if not self.initialized then
 					return "clc_RespondCvarValue"
@@ -515,6 +527,7 @@ NET_MESSAGES = {
 		},
 
 		[clc_FileCRCCheck] = { -- 14
+			NativeConstructor = CLC_FileCRCCheck,
 			__tostring = function(self)
 				if not self.initialized then
 					return "clc_FileCRCCheck"
@@ -561,6 +574,7 @@ NET_MESSAGES = {
 		},
 
 		[clc_CmdKeyValues] = { -- 16
+			NativeConstructor = CLC_CmdKeyValues,
 			__tostring = function(self)
 				if not self.initialized then
 					return "clc_CmdKeyValues"
@@ -598,6 +612,7 @@ NET_MESSAGES = {
 		},
 
 		[clc_FileMD5Check] = { -- 17
+			NativeConstructor = CLC_FileMD5Check,
 			__tostring = function(self)
 				if not self.initialized then
 					return "clc_FileMD5Check"
@@ -644,6 +659,7 @@ NET_MESSAGES = {
 		},
 
 		[clc_GMod_ClientToServer] = { -- 18
+			NativeConstructor = CLC_GMod_ClientToServer,
 			__tostring = function(self)
 				if not self.initialized then
 					return "clc_GMod_ClientToServer"
@@ -728,6 +744,7 @@ NET_MESSAGES = {
 
 	SVC = {
 		[svc_Print] = { -- 7
+			NativeConstructor = SVC_Print,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_Print"
@@ -759,6 +776,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_ServerInfo] = { -- 8
+			NativeConstructor = SVC_ServerInfo,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_ServerInfo"
@@ -842,6 +860,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_SendTable] = { -- 9
+			NativeConstructor = SVC_SendTable,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_SendTable"
@@ -877,6 +896,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_ClassInfo] = { -- 10
+			NativeConstructor = SVC_ClassInfo,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_ClassInfo"
@@ -929,6 +949,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_SetPause] = { -- 11
+			NativeConstructor = SVC_SetPause,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_SetPause"
@@ -960,6 +981,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_CreateStringTable] = { -- 12
+			NativeConstructor = SVC_CreateStringTable,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_CreateStringTable"
@@ -1011,6 +1033,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_UpdateStringTable] = { -- 13
+			NativeConstructor = SVC_UpdateStringTable,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_UpdateStringTable"
@@ -1051,6 +1074,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_VoiceInit] = { -- 14
+			NativeConstructor = SVC_VoiceInit,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_VoiceInit"
@@ -1084,6 +1108,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_VoiceData] = { -- 15
+			NativeConstructor = SVC_VoiceData,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_VoiceData"
@@ -1125,6 +1150,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_Sounds] = { -- 17
+			NativeConstructor = SVC_Sounds,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_Sounds"
@@ -1166,6 +1192,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_SetView] = { -- 18
+			NativeConstructor = SVC_SetView,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_SetView"
@@ -1197,6 +1224,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_FixAngle] = { -- 19
+			NativeConstructor = SVC_FixAngle,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_FixAngle"
@@ -1234,6 +1262,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_CrosshairAngle] = { -- 20
+			NativeConstructor = SVC_CrosshairAngle,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_CrosshairAngle"
@@ -1269,6 +1298,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_BSPDecal] = { -- 21
+			NativeConstructor = SVC_BSPDecal,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_BSPDecal"
@@ -1317,6 +1347,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_UserMessage] = { -- 23
+			NativeConstructor = SVC_UserMessage,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_UserMessage"
@@ -1356,6 +1387,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_EntityMessage] = { -- 24
+			NativeConstructor = SVC_EntityMessage,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_EntityMessage"
@@ -1393,6 +1425,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_GameEvent] = { -- 25
+			NativeConstructor = SVC_GameEvent,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_GameEvent"
@@ -1426,6 +1459,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_PacketEntities] = { -- 26
+			NativeConstructor = SVC_PacketEntities,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_PacketEntities"
@@ -1473,6 +1507,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_TempEntities] = { -- 27
+			NativeConstructor = SVC_TempEntities,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_TempEntities"
@@ -1508,6 +1543,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_Prefetch] = { -- 28
+			NativeConstructor = SVC_Prefetch,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_Prefetch"
@@ -1539,6 +1575,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_Menu] = { -- 29
+			NativeConstructor = SVC_Menu,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_Menu"
@@ -1574,6 +1611,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_GameEventList] = { -- 30
+			NativeConstructor = SVC_GameEventList,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_GameEventList"
@@ -1609,6 +1647,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_GetCvarValue] = { -- 31
+			NativeConstructor = SVC_GetCvarValue,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_GetCvarValue"
@@ -1642,6 +1681,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_CmdKeyValues] = { -- 32
+			NativeConstructor = SVC_CmdKeyValues,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_CmdKeyValues"
@@ -1679,6 +1719,7 @@ NET_MESSAGES = {
 		},
 
 		[svc_GMod_ServerToClient] = { -- 33
+			NativeConstructor = SVC_GMod_ServerToClient,
 			__tostring = function(self)
 				if not self.initialized then
 					return "svc_GMod_ServerToClient"
@@ -1775,7 +1816,7 @@ NET_MESSAGES = {
 	}
 }
 
-function NetMessage(msgtype, server)
+function NetMessage(netchan, msgtype, server)
 	local metatable = NET_MESSAGES[msgtype]
 	if not metatable then
 		if server then
@@ -1789,5 +1830,15 @@ function NetMessage(msgtype, server)
 		end
 	end
 
-	return setmetatable(table, metatable)
+	return setmetatable({}, metatable)
+
+	--[[local nativeConstructor = metatable.NativeConstructor
+	if not nativeConstructor then
+		nativeConstructor = function()
+			return setmetatable({}, metatable)
+		end
+	end
+
+	metatable.Native = metatable.Native or nativeConstructor(netchan)
+	return metatable.Native]]
 end

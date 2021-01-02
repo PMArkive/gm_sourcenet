@@ -24,7 +24,7 @@ local function HandleStream(name, netchan, write)
 	local read = sn_bf_read(write:GetBasePointer(), totalbits)
 	while read:GetNumBitsLeft() >= NET_MESSAGE_BITS do
 		local msg = read:ReadUInt(NET_MESSAGE_BITS)
-		local handler = NetMessage(msg, SERVER)
+		local handler = NetMessage(netchan, msg, SERVER)
 		if not handler then
 			MsgC(Color(255, 0, 0), "Unknown outgoing message " .. msg .. " on " .. name .. " stream with " .. read:GetNumBitsLeft() .. " bit(s) left\n")
 			return false
